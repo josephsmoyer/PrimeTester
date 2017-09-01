@@ -14,7 +14,20 @@ public class PrimeTester {
      * @return true iff n is prime
      */
     public static boolean isPrime(long n) {
+        if(n==0|| n==1 || n==4  )
+        {return false;}
+        else if(n==2 )
+        {return true;}
+        else {
+            for(int i = 2; 2*i<n; i++)
+            {
+                if(n%i==0)
+                    return false;
+            }
+        }
+        return true;
+
         // for now, return a random result
-        return Math.random() > 0.5;
+        //return Math.random() > 0.5;
     }
 }
